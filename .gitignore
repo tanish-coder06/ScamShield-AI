@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# Editors
+.vscode/
+
+# Generated model
+backend/model/*.joblib
+
+# Temporary files
+*.log
+.pytest_cache/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
