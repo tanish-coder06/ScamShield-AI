@@ -1,0 +1,111 @@
+{
+  "dataset": "UCI PhiUSIIL Phishing URL Dataset",
+  "dataset_id": 967,
+  "selected_algorithm": "Random Forest",
+  "feature_columns": [
+    "URLLength",
+    "DomainLength",
+    "IsDomainIP",
+    "NoOfSubDomain",
+    "NoOfLettersInURL",
+    "NoOfDegitsInURL",
+    "NoOfOtherSpecialCharsInURL",
+    "LetterRatioInURL",
+    "DegitRatioInURL",
+    "SpacialCharRatioInURL",
+    "IsHTTPS"
+  ],
+  "validation_results": {
+    "Logistic Regression": {
+      "accuracy": 0.9886,
+      "precision": 0.9889,
+      "recall": 0.9843,
+      "f1_score": 0.9866,
+      "true_negatives": 20060,
+      "false_positives": 167,
+      "false_negatives": 237,
+      "true_positives": 14905,
+      "confusion_matrix": [
+        [
+          20060,
+          167
+        ],
+        [
+          237,
+          14905
+        ]
+      ]
+    },
+    "Decision Tree": {
+      "accuracy": 0.9947,
+      "precision": 0.9983,
+      "recall": 0.9894,
+      "f1_score": 0.9938,
+      "true_negatives": 20201,
+      "false_positives": 26,
+      "false_negatives": 161,
+      "true_positives": 14981,
+      "confusion_matrix": [
+        [
+          20201,
+          26
+        ],
+        [
+          161,
+          14981
+        ]
+      ]
+    },
+    "Random Forest": {
+      "accuracy": 0.9949,
+      "precision": 0.9972,
+      "recall": 0.9908,
+      "f1_score": 0.994,
+      "true_negatives": 20185,
+      "false_positives": 42,
+      "false_negatives": 140,
+      "true_positives": 15002,
+      "confusion_matrix": [
+        [
+          20185,
+          42
+        ],
+        [
+          140,
+          15002
+        ]
+      ]
+    }
+  },
+  "test_results": {
+    "accuracy": 0.9945,
+    "precision": 0.9966,
+    "recall": 0.9906,
+    "f1_score": 0.9936,
+    "true_negatives": 20177,
+    "false_positives": 51,
+    "false_negatives": 142,
+    "true_positives": 15000,
+    "confusion_matrix": [
+      [
+        20177,
+        51
+      ],
+      [
+        142,
+        15000
+      ]
+    ]
+  },
+  "split_sizes": {
+    "train": 165056,
+    "validation": 35369,
+    "test": 35370
+  },
+  "limitations": [
+    "Features are approximate URL-string heuristics.",
+    "Training and inference use the same feature extractor.",
+    "Random splitting may overestimate performance on unseen domains.",
+    "Predictions do not guarantee that a URL is safe or malicious."
+  ]
+}
